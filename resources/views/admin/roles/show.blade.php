@@ -2,7 +2,7 @@
 @section('title', 'CodersFree')
 
 @section('content_header')
-    <h1>Mostrar Etiqueta</h1>
+    <h1>Mostrar rol</h1>
 @stop
 
 @section('content')

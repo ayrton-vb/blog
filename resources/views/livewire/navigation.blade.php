@@ -141,14 +141,17 @@
                 role="menuitem"
                 tabindex="-1"
                 id="user-menu-item-0"
-              >Your Profile</a>
-              <a
+              >Tu Perfil</a>
+
+                @can('admin.home')
+                <a
                 href="{{ route('admin.home') }}"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="user-menu-item-0"
-              >Dashboard</a>
+                >Dashboard</a>
+                @endcan
             
               <form method="POST" action="{{ route('logout') }}">
                 @csrf
@@ -156,7 +159,7 @@
                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" 
                     role="menuitem" tabindex="-1" id="user-menu-item-2"
                     onclick="event.preventDefault(); this.closest('form').submit();"
-                >Sign out</a>
+                >Cerrar Sesion</a>
             </form>
 
             </div>

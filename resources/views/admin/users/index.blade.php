@@ -2,11 +2,11 @@
 @section('title', 'CodersFree')
 
 @section('content_header')
-    <h1>Mostar detalle de Categoria</h1>
+    <h1>Lista de Usuarios</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    @livewire('admin.users-index')
 @stop
 
 @section('css')

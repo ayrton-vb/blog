@@ -316,74 +316,50 @@ return [
         //     'text' => 'search',
         // ],
         [
-            'text' => 'dashboard',
+            'text' => 'Dashboard',
             'route' => 'admin.home',
             'icon' => 'fas fa-tachometer-alt fa-fw',
+            'can' => 'admin.home'
         ],
-        ['header' => 'ADMINISTRADOR'],
+        [
+            'text' => 'Usuarios',
+            'route' => 'admin.users.index',
+            'icon' => 'fas fa-users fa-fw',
+            'can' => 'admin.users.index'
+        ],
+        [
+            'text' => 'Lista de Roles',
+            'route' => 'admin.roles.index',
+            'icon' => 'fas fa-users-cog fa-fw',
+            'can' => 'admin.users.index'
+        ],
         [
             'text' => 'Categorias',
             'route' => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/categories*'],
+            'can' => 'admin.categories.index'
         ],
         [
             'text' => 'Etiquetas',
             'route' => 'admin.tags.index',
             'icon' => 'far fa-fw fa-bookmark',
+            'active' => ['admin/tags*'],
+            'can' => 'admin.tags.index'
+        ],
+
+        ['header' => 'OPCIONES DE BLOG'],
+        [
+            'text' => 'Lista de Post',
+            'route' => 'admin.posts.index',
+            'icon' => 'fas fa-fw fa-clipboard',
+            'can' => 'admin.posts.index'
         ],
         [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
-        ],
-        [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
+            'text' => 'Crear Post',
+            'route' => 'admin.posts.create',
+            'icon' => 'fas fa-fw fa-file',
+            'can' => 'admin.posts.create'
         ],
     ],
 
@@ -539,5 +515,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

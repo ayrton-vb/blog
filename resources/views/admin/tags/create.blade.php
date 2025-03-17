@@ -9,28 +9,10 @@
     <div class="card">
         <div class="card-body">
             {!! Form::open(['route' => 'admin.tags.store']) !!}
-            <div class="form-group">
-                {!! Form::label('name', 'Nombre')!!}
-                {!! Form::text('name', null, ['class'=>'form-control','placeholder'=>'Ingrese el nombre de la etiqueta ...']) !!}
-                {!! Form::close() !!}
-            </div>
 
-            <div class="form-group">
-            {!! Form::open(['route' => 'admin.tags.store']) !!}
-            {!! Form::label('slug', 'Slug')!!}
-            {!! Form::text('slug', null, ['class'=>'form-control','placeholder'=>'Ingrese el slug de la etiqueta ...', 'readonly']) !!}    
-            </div>
+            @include('admin.tags.partials.form')
 
-            <div class="form-group">
-                <label for="">Colo:</label>
-                <select name="color" id="" class="form-control">
-                    <option value="">color rojo</option>
-                    <option value="">color azul</option>
-                    <option value="">color amarillo</option>
-                </select>
-            </div>
-
-            {!! Form::submit('Crear Etiqueta', ['class'=> 'btn btn-primary']) !!}
+                {!! Form::submit('Crear Etiqueta', ['class'=> 'btn btn-primary']) !!}
 
             {!! Form::close() !!}
 

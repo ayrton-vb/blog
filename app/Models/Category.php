@@ -12,6 +12,7 @@ class Category extends Model
     //asignacion masiva
     protected $fillable = ['name','slug'];
 
+    //para la url
     public function getRouteKeyName(){
         return 'slug';
     }
